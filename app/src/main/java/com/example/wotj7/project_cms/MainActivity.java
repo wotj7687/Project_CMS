@@ -11,3 +11,5 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 }
+
+// 프로젝트 수정을 확인하기 위한 주석입니다.
