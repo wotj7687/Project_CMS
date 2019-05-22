@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity implements ToDoListRecyclerv
         rvTodoList.setAdapter(todoAdapter);
     }
 
-
+    //option menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.add_to_to_list, menu);
@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity implements ToDoListRecyclerv
         return super.onOptionsItemSelected(item);
     }
 
+    //checkbox clicked
     @Override
     public void onBtnCheckClicked(Object o) {
 
