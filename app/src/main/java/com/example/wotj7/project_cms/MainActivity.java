@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
+import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity implements ToDoListRecyclerviewClickListener{
 
@@ -21,7 +22,7 @@ public class MainActivity extends AppCompatActivity implements ToDoListRecyclerv
     }
 
     private void setupRecyclerView() {
-        rvTodoList.setLayoutManager(new LinearLayoutManager(this));;
+        rvTodoList.setLayoutManager(new LinearLayoutManager(this));
         todoAdapter = new ToDoListAdapter();
         rvTodoList.setAdapter(todoAdapter);
     }
@@ -29,9 +30,14 @@ public class MainActivity extends AppCompatActivity implements ToDoListRecyclerv
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        return super.onCreateOptionsMenu(menu);
+        getMenuInflater().inflate(R.menu.add_to_to_list, menu);
+        return true;
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        return super.onOptionsItemSelected(item);
+    }
 
     @Override
     public void onBtnCheckClicked(Object o) {
