@@ -9,7 +9,7 @@
 
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/character"
         android:layout_width="286dp"
         android:layout_height="237dp"
         android:layout_marginTop="8dp"
@@ -18,7 +18,8 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rv_to_do_list"
-        app:srcCompat="@drawable/torry" />
+        app:srcCompat="@drawable/torry"
+        android:onClick="onCharacterClicked"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_to_do_list"

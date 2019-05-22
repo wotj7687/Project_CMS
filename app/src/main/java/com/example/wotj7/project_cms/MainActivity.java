@@ -1,16 +1,20 @@
 package com.example.wotj7.project_cms;
 
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity implements ToDoListRecyclerviewClickListener{
 
     private RecyclerView rvTodoList;
     private ToDoListAdapter todoAdapter;
+    ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +22,7 @@ public class MainActivity extends AppCompatActivity implements ToDoListRecyclerv
         setContentView(R.layout.activity_main);
 
         rvTodoList = findViewById(R.id.rv_to_do_list);
+        imageView = findViewById(R.id.character);
         setupRecyclerView();
     }
 
@@ -43,6 +48,16 @@ public class MainActivity extends AppCompatActivity implements ToDoListRecyclerv
     @Override
     public void onBtnCheckClicked(Object o) {
 
+    }
+
+    public void onCharacterClicked(View view) {
+        imageView.setImageResource(R.drawable.torry_happy);
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            public void run() {
+                imageView.setImageResource(R.drawable.torry);
+            }
+        }, 1000);
     }
 }
 
